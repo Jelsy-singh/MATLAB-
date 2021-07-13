@@ -1,0 +1,21 @@
+clc
+clear all
+x=0:1:40;
+t=0:1:1024;
+y=sin(x);
+subplot(2,2,1)
+plot(x,y) %CT
+title('Continous sine wave')
+grid off
+subplot(2,2,2)
+stem(x,y) %DT
+title('Discrete sine wave')
+grid off
+ xft= fft(x,1024);
+ xabs=abs(xft);
+ subplot (2,2,3)
+ plot(xabs) 
+ title ('fourier transform')
+
+ 
+ 
